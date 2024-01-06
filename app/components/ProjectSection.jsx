@@ -1,9 +1,20 @@
-import React from 'react'
-import Image from 'next/image'
-import TapAndEat from '../../public/tapandeat.png'
+'use client';
+
+import React, { useRef } from 'react'
 import Link from 'next/link'
+import { motion, useInView } from 'framer-motion'
 
 const ProjectSection = () => {
+
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true })
+
+    const cardComponent = {
+        initial: { y: 0, opacity: 0 },
+        animate: { y: 1, opacity: 50 }
+    }
+
+
     return (
         <div className='mt-6 '>
             <div>
@@ -13,7 +24,13 @@ const ProjectSection = () => {
                     <p className="text-lg">Web Projects done by me.</p>
                 </div>
                 <div>
-                    <div className='flex  justify-center flex-wrap gap-6'>
+                    <motion.div ref={ref}
+                        variants={cardComponent}
+                        initial='initial'
+                        animate={isInView ? 'animate' : "initial"}
+                        transition={{ duration: 0.3 }}
+
+                        className='flex  justify-center flex-wrap gap-6'>
                         <div>
                             <div
                                 className='h-52 w-64 md:h-64 md:w-80 rounded-t-xl relative group '
@@ -86,7 +103,7 @@ const ProjectSection = () => {
                                 <p className='text-[#ADB7BE]'>A Mobile Repair Application</p>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
                 </div>
                 <div className="mx-auto prose text-center dark:prose-invert mt-14 max-w-screen-sm">
