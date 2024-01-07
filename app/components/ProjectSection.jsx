@@ -10,15 +10,15 @@ const ProjectSection = () => {
     const isInView = useInView(ref, { once: true })
 
     const cardComponent = {
-        initial: { y: 0, opacity: 0 },
-        animate: { y: 1, opacity: 50 }
+        initial: { x: 0, opacity: 0 },
+        animate: { x: 2, opacity: 50 }
     }
 
 
     return (
-        <div className='mt-6 '>
+        <div id="project" className='mt-6 '>
             <div>
-                <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl ">
+                <h1 id="project" className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl ">
                     Projects</h1>
                 <div className="text-center mb-6">
                     <p className="text-lg">Web Projects done by me.</p>
@@ -28,7 +28,7 @@ const ProjectSection = () => {
                         variants={cardComponent}
                         initial='initial'
                         animate={isInView ? 'animate' : "initial"}
-                        transition={{ duration: 0.3 }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
 
                         className='flex  justify-center flex-wrap gap-6'>
                         <div>
@@ -86,7 +86,7 @@ const ProjectSection = () => {
                             >
                                 <div className="overlay items-center justify-center rounded-t-xl absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
                                     <Link
-                                        href="https://dev.admin.tapandeat.co/"
+                                        href="https://www.mragain.nl/"
                                         className='h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link'
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 cursor-pointer text-[#ADB7BE]  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover/link:text-white ">
