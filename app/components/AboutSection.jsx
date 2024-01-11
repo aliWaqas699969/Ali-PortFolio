@@ -66,7 +66,7 @@ const AboutSection = () => {
                 <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
                     <h2 className='text-4xl font-bold mb-4'>About me</h2>
                     <p className='text-base lg:text-lg'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi libero est nihil nisi vitae quasi at ab reiciendis animi quidem distinctio, dolorem voluptas officia perferendis quam delectus reprehenderit? Cupiditate inventore recusandae molestiae?
+                        🚀 Greetings! I am Ali waqas, a passionate frontend web developer with a keen eye for design and a commitment to delivering pixel-perfect, user-friendly experiences. 🌐✨ 🎨Turn your vision into reality with captivating and modern website designs. I specialize in creating visually appealing layouts that align with your brand identity. 💻Ensure your website looks flawless on every device. I wll expertly code your design into responsive HTML and CSS, Javascript(reactjs/nextjs)🚀
                     </p>
                     <div className="flex flex-row mt-8 cursor-pointer">
                         <TabButton
